@@ -3,7 +3,7 @@
 - each node is an object that belongs to a particular class .
 - each node node consist of two attributes next (or link) and data .
 ###  Data
-     Stores the value of the node.
+  Stores the value of the node.
 ### Next (or Link)
-     A reference to the next node in the sequence.
+   A reference to the next node in the sequence.
   
