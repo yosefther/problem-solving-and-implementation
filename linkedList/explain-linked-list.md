@@ -15,7 +15,7 @@
   //TODO : ADD IMGE FOR LINKEDLIST 
 
 # FUNCTION EXPLAIN 
-
+In this section, we explain the core functions implemented in the LinkedList class. These functions enable essential operations like adding elements, checking if the list is empty, and clearing the list. Each function is designed to perform a specific task, ensuring modular and reusable code.
 # Add(T data) 
 This method is used to add a new node or value at the start of the LinkedList.
 - A new node containing the specified data is created.
