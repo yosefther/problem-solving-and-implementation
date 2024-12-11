@@ -3,6 +3,8 @@
 A comprehensive collection of essential data structures implemented from scratch.
 This repository serves as a hands-on guide to learning and mastering the core concepts of data structures through practical coding.
 
+**note : this project is for learning purposes only**
+
 :smiley: **Features**
 
 - Basic Structures: Arrays, Linked Lists (Singly, Doubly, Circular).
