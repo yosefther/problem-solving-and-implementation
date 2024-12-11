@@ -12,7 +12,7 @@
    - its type is the same type of the object , which means its holds an address of other object of the same type.
    
   ## visual explanation 
-  //TODO : ADD IMGE FOR LINKEDLIST 
+  ![alt text] (https://github.com/yosefther/data-structure-implementation/blob/master/assets/Capture.PNG)
 
 # FUNCTION EXPLAIN 
 In this section, we explain the core functions implemented in the LinkedList class. 
