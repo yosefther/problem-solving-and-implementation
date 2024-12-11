@@ -37,15 +37,15 @@ this method is used to remove all nodes from the LinkedList.
 # DisplayList
 This method is used to traverse and print all elements in the LinkedList.
 
-###**Start from the Head:**
+### **Start from the Head:**
 The traversal begins with the head node of the list.
 
-###**Iterate Through Nodes:**
+### **Iterate Through Nodes:**
 
 A temporary pointer (c) is used to move through each node in the list.
 The loop continues until the pointer becomes null, indicating the end of the list.
 
-###**Print Data:**
+### **Print Data:**
 
 For each node, the Data attribute is printed to the console.
 
