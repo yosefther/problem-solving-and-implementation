@@ -15,3 +15,6 @@ This repository serves as a hands-on guide to learning and mastering the core co
 - To provide clear, modular code implementations.
 - To include comments explaining the logic behind each function.
 - To include examples and test cases for better understanding.
+
+## Basic data Structure
+- [linked list code](https://github.com/yosefther/data-structure-implementation/blob/master/linkedList/Program.cs)
