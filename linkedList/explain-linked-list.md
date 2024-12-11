@@ -15,6 +15,17 @@
   //TODO : ADD IMGE FOR LINKEDLIST 
 
 # FUNCTION EXPLAIN 
-//TODO : EXPLAIN THE MEHODS 
 
-## 
+# Add(T data) 
+This method is used to add a new node or value at the start of the LinkedList.
+- A new node containing the specified data is created.
+- he Next pointer of the new node is set to the current head of the list.
+- The head is updated to the new node, effectively inserting it at the beginning.
+  
+# Empty()
+- Returns true if there are no nodes in the list.
+- Returns false if the list contains one or more nodes.
+- It determines this by checking the value of Count or head.
+  
+# Clear()
+this method is used to remove all nodes from the LinkedList.
