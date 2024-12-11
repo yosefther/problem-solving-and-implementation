@@ -33,3 +33,19 @@ this method is used to remove all nodes from the LinkedList.
 - The head is set to null, severing all links between nodes.
 - The Count is reset to indicate an empty list.
 - Effectively, all nodes become unreachable and are garbage-collected by the runtime.
+
+# DisplayList
+This method is used to traverse and print all elements in the LinkedList.
+
+**Start from the Head:**
+The traversal begins with the head node of the list.
+
+**Iterate Through Nodes:**
+
+A temporary pointer (c) is used to move through each node in the list.
+The loop continues until the pointer becomes null, indicating the end of the list.
+
+**Print Data:**
+
+For each node, the Data attribute is printed to the console.
+
