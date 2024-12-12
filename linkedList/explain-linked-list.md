@@ -12,7 +12,7 @@
    - its type is the same type of the object , which means its holds an address of other object of the same type.
    
   ## visual explanation 
-  ![alt text](https://github.com/yosefther/data-structure-implementation/blob/master/assets/Capture.PNG?raw=true)
+  ![alt text](https://github.com/yosefther/data-structure-implementation/blob/master/assets/LinkedList.PNG?raw=true)
 # FUNCTION EXPLAIN 
 In this section, we explain the core functions implemented in the LinkedList class. 
 
@@ -37,15 +37,15 @@ this method is used to remove all nodes from the LinkedList.
 # DisplayList
 This method is used to traverse and print all elements in the LinkedList.
 
-**Start from the Head:**
+### **Start from the Head:**
 The traversal begins with the head node of the list.
 
-**Iterate Through Nodes:**
+### **Iterate Through Nodes:**
 
 A temporary pointer (c) is used to move through each node in the list.
 The loop continues until the pointer becomes null, indicating the end of the list.
 
-**Print Data:**
+### **Print Data:**
 
 For each node, the Data attribute is printed to the console.
 
