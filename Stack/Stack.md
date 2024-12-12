@@ -6,6 +6,6 @@
 In this section, we explain the core functions implemented in the LinkedList class.
 
 ### push()
-###Peek()
-###Pop()
-###PrintStack()
+### Peek()
+### Pop()
+### PrintStack()
