@@ -24,13 +24,13 @@ namespace linkedList
     public class LinkedList<T>
     {
         private int Count = 0 ;
-        private Node<T> head = null;
-        private Node<T> tail;
+        private Node<T>? head = null;
+        private Node<T>? tail;
 
         //This method is used to add a new node or value at the start of the LinkedList.
         public void Add( T data )
         {
-            Node<T> newNode = new Node<T>(data, head);
+            Node<T>? newNode = new Node<T>(data, head);
             if (head == null)
             {
                 head = tail = newNode;
