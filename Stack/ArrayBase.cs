@@ -1,50 +1,77 @@
-﻿using System.ComponentModel.Design;
-using System.Runtime.Intrinsics.X86;
+﻿using System;
 
 namespace Stack
 {
-    internal class ArrayBase
-    {
-        static void Main(string[] args)
-        {
-            ArrayStack<int> test = new ArrayStack<int>();
-            Console.WriteLine(test.Empty());
-            test.Push(10);
-            test.Push(20);
-            test.Push(30);
-            Console.WriteLine(test.Empty());
-            test.Display();
-        }
-    }
+    /// <summary>
+    /// A generic stack implementation using an array.
+    /// </summary>
     class ArrayStack<T>
     {
-        private T[] Items;
-        private int Top = 0;
-        public ArrayStack (){
-            Items = new T[10];
-            Top = -1; 
-}
+        private T[] items; // Array to store stack elements
+        private int top;   // Index of the top element
 
+        /// <summary>
+        /// Initializes an empty stack with a default capacity of 10.
+        /// </summary>
+        public ArrayStack()
+        {
+            items = new T[10]; // Default capacity
+            top = -1;          // Initialize top to -1 (empty stack)
+        }
+
+        /// <summary>
+        /// Adds a new element to the top of the stack.
+        /// </summary>
+        /// <param name="data">The element to add.</param>
+        /// <exception cref="InvalidOperationException">Thrown if the stack is full.</exception>
         public void Push(T data)
         {
-
-                Items[++Top] = data;
+            if (top == items.Length - 1)
+            {
+                throw new InvalidOperationException("Stack overflow: no more space to push.");
+            }
+            items[++top] = data; // Add element and increment the top index
         }
+
+        /// <summary>
+        /// Checks if the stack is empty.
+        /// </summary>
+        /// <returns>True if the stack is empty, otherwise false.</returns>
         public bool Empty()
         {
-            return Top == -1;
+            return top == -1;
         }
+
+        /// <summary>
+        /// Removes and returns the top element of the stack.
+        /// </summary>
+        /// <returns>The top element of the stack.</returns>
+        /// <exception cref="InvalidOperationException">Thrown if the stack is empty.</exception>
         public T Pop()
         {
-            return Items[Top--];
-        }
-        public  void Display()
-        {
-            while (Top>-1)
+            if (Empty())
             {
-                Console.WriteLine(Items[Top--]);
+                throw new InvalidOperationException("Stack underflow: no elements to pop.");
+            }
+            return items[top--]; // Return the top element and decrement the top index
+        }
+
+        /// <summary>
+        /// Displays all elements in the stack from top to bottom.
+        /// </summary>
+        public void Display()
+        {
+            if (Empty())
+            {
+                Console.WriteLine("Stack is empty.");
+                return;
+            }
+
+            Console.WriteLine("Stack contents (top to bottom):");
+            for (int i = top; i >= 0; i--)
+            {
+                Console.WriteLine(items[i]);
             }
         }
     }
 }
-
