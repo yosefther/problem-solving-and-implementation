@@ -21,10 +21,10 @@ This repository serves as a hands-on guide to learning and mastering the core co
 # Basic data Structure
 **linked list**
 - [**Code**: linked list](https://github.com/yosefther/data-structure-implementation/blob/master/linkedList/LinkedList.cs) 
-- [**explanation**: linked list](https://github.com/yosefther/data-structure-implementation/blob/master/linkedList/explain-linked-list.md)
+- [**documentation**: linked list](https://github.com/yosefther/data-structure-implementation/blob/master/linkedList/explain-linked-list.md)
 
 # bstract Data Types
 **Stack**
 - [**Code**: stack based on array](https://github.com/yosefther/data-structure-implementation/blob/master/Stack/ArrayBase.cs)
 - [**Code**: stack based in linked list](https://github.com/yosefther/data-structure-implementation/blob/master/Stack/LinkedListBase.cs)
-- [**explanation** stack](https://github.com/yosefther/data-structure-implementation/blob/master/Stack/Stack.md) 
+- [**documentation** stack](https://github.com/yosefther/data-structure-implementation/blob/master/Stack/Stack.md) 
