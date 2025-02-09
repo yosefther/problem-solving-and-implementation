@@ -1,84 +1,57 @@
-Queue Data Structure
-A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle. This means the first item added to the queue will be the first one to be removed. Think of it like a line of people waiting for a service: the person who arrives first gets served first.
+# Queue Data Structure
+A **queue** is a linear data structure that adheres to the First-In-First-Out (FIFO) principle. This means the first element added to the queue is always the first to be removed, analogous to a real-world waiting line.
 
-Core Functions in a Linked List-Based Queue
-The following functions are typically implemented in a LinkedList class to manage a queue efficiently. In this implementation:
+## Core Operations
+In a linked list-based queue implementation:
 
-The head of the linked list represents the front of the queue (where items are removed).
+The head of the linked list represents the front (removal point).
 
-The tail of the linked list represents the rear of the queue (where items are added).
+The tail of the linked list represents the rear (insertion point).
 
-1. Insert (Enqueue)
-Purpose: Adds an item to the rear of the queue.
+## Enqueue (Insert)
+Purpose: Add an item to the rear of the queue.
 
-Process:
+## Process:
 
-Create a new node with the item.
+Create a new node for the item.
 
-If the queue is empty, set both head and tail to point to the new node.
+If the queue is empty, set both head and tail to the new node.
 
-Otherwise, link the current tail node to the new node and update tail to the new node.
+For a non-empty queue, link the new node to the current tail and update the tail pointer.
 
-Time Complexity: O(1) (constant time with a tail pointer).
+Time Complexity: O(1) (constant time due to direct tail access).
 
-Example:
+## Dequeue (Remove)
+Purpose: Remove the item at the front of the queue.
 
-python
-Copy
-def insert(self, item):
-    new_node = Node(item)
-    if self.empty():
-        self.head = self.tail = new_node
-    else:
-        self.tail.next = new_node
-        self.tail = new_node
-2. Remove (Dequeue)
-Purpose: Removes the item at the front of the queue (the oldest item).
+### Process:
 
-Process:
+Verify the queue is not empty.
 
-Check if the queue is empty using empty(). If true, raise an error or return None.
+Retrieve the data from the head node.
 
-Otherwise, retrieve the data from the head node.
+Update the head pointer to the next node.
 
-Update head to point to the next node.
-
-If the queue becomes empty after removal, update tail to None.
+If the queue becomes empty after removal, reset the tail pointer.
 
 Time Complexity: O(1).
 
-Example:
+## IsEmpty (Empty Check)
+Purpose: Determine if the queue contains no elements.
 
-python
-Copy
-def remove(self):
-    if self.empty():
-        raise Exception("Queue Underflow: Cannot remove from an empty queue")
-    removed_item = self.head.data
-    self.head = self.head.next
-    if self.head is None:
-        self.tail = None
-    return removed_item
-3. Empty (IsEmpty)
-Purpose: Checks if the queue contains no items.
-
-Process: Return True if the head pointer is None, otherwise return False.
+### Process: Check if the head pointer is null (or None).
 
 Time Complexity: O(1).
 
-Example:
-
-python
-Copy
-def empty(self):
-    return self.head is None
 Key Notes
-Underflow Handling: Always check if the queue is empty before calling remove() to avoid errors.
+Underflow Handling: Always check IsEmpty before calling Dequeue to prevent errors.
 
-Efficiency: Linked list-based queues ensure O(1) time complexity for both insertion and removal, making them ideal for dynamic data.
+Efficiency: Linked list-based queues achieve O(1) time complexity for both insertion and removal.
 
-Standard Terms:
+Terminology:
 
-Insert → "Enqueue"
+Enqueue = Insert (add to rear)
 
-Remove → "Dequeue"
+Dequeue = Remove (take from front)
+
+Use Cases: Task scheduling, buffering, and breadth-first search (BFS) algorithms.
