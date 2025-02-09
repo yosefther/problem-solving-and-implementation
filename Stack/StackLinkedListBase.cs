@@ -5,14 +5,14 @@ namespace Stack
     /// <summary>
     /// A generic linked list-based stack implementation.
     /// </summary>
-    internal class LinkedListBase<T>
+    internal class StackLinkedListBase<T>
     {
         private Node<T>? head; // The head node of the linked list
 
         /// <summary>
         /// Initializes an empty stack.
         /// </summary>
-        public LinkedListBase()
+        public StackLinkedListBase()
         {
             head = null;
         }

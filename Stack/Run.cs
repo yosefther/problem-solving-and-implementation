@@ -18,7 +18,7 @@ namespace Stack
 
             // Test the stack implementation based on a linked list
             Console.WriteLine("\nTesting LinkedListStack:");
-            LinkedListBase<int> linkedListStack = new LinkedListBase<int>();
+            StackLinkedListBase<int> linkedListStack = new StackLinkedListBase<int>();
             linkedListStack.Push(39);
             linkedListStack.Push(21);
             linkedListStack.Push(23);
