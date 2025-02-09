@@ -25,6 +25,6 @@ This repository serves as a hands-on guide to learning and mastering the core co
 
 # bstract Data Types
 **Stack**
-- [**Code**: stack based on array](https://github.com/yosefther/data-structure-implementation/blob/master/queue/QueueArrayBase.cs)
-- [**Code**: stack based in linked list](https://github.com/yosefther/data-structure-implementation/blob/master/queue/QueueLinkedListBase.cs)
+- [**Code**: stack based on array](https://github.com/yosefther/data-structure-implementation/blob/master/Stack/StackArrayBase.cs)
+- [**Code**: stack based in linked list](https://github.com/yosefther/data-structure-implementation/blob/master/Stack/StackLinkedListBase.cs)
 - [**documentation** stack](https://github.com/yosefther/data-structure-implementation/blob/master/Stack/Stack.md) 
