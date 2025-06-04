@@ -29,7 +29,7 @@ This method is used to check whether the LinkedList is empty.
 - It determines this by checking the value of Count or head.
   
 # Clear()
-this method is used to remove all nodes from the LinkedList.
+This method is used to clear all nodes from the LinkedList.
 - The head is set to null, severing all links between nodes.
 - The Count is reset to indicate an empty list.
 - Effectively, all nodes become unreachable and are garbage-collected by the runtime.

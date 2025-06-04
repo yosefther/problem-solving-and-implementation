@@ -70,9 +70,9 @@ namespace linkedList
         public int Index() => count;
 
         /// <summary>
-        /// Removes all nodes from the linked list.
+        /// Clears all nodes from the linked list.
         /// </summary>
-        public void Clean()
+        public void Clear()
         {
             head = tail = null; // Remove all references to nodes
             count = 0;         // Reset the count
