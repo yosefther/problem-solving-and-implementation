@@ -20,8 +20,8 @@ namespace linkedList
             Console.WriteLine("List contents:");
             linkedList.DisplayList();
 
-            linkedList.Clean();
-            Console.WriteLine("\nAfter cleaning the list:");
+            linkedList.Clear();
+            Console.WriteLine("\nAfter clearing the list:");
             linkedList.DisplayList();
         }
     }
