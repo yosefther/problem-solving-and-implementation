@@ -5,7 +5,7 @@ class Pair:
 
 class HashMap:
     def __init__(self):
-        self.size = 2
+        self.size = 0
         self.capasity = 2
         self.map=[None,None]
         
@@ -19,11 +19,11 @@ class HashMap:
     def _rehash(self):
         self.capasity = 2 *self.capasity
         newMap = []
-        for i in range(newMap):
+        for i in range(self.capasity):
             newMap.append(None)
         oldMap = self.map
         self.map = newMap
-        self.size() =0 
+        self.size =0 
         for pair in oldMap :
             if pair:
                 self.put(pair.key , pair.val)
@@ -33,19 +33,20 @@ class HashMap:
         index = self._hash(key)
         while True : 
             if self.map[index] == None:
-                self.map[index] = pair() 
+                self.map[index] = pair 
+                self.size +=
                 if self.size>=self.capasity:
                     self._rehash()
             elif self.map[index].key == key:
                 return pair.key
-            index = 1
+            index += 1
             index = index%self.capasity
 
 
     def get(self,key):
         index = self._hash(key)
         while self.map[index] != None:
-            if self.map[index] == key :
+            if self.map[index].key == key :
                 return self.map[index].val
             index+=1
             index = index%self.capasity # * 
