@@ -13,5 +13,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stack\Stack.csproj" />
+    <ProjectReference Include="..\algorithms\csharp\src\ProblemSolving.Algorithms\ProblemSolving.Algorithms.csproj" />
   </ItemGroup>
 </Project>
