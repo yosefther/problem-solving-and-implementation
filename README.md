@@ -2,23 +2,23 @@
 
 Implementations of fundamental data structures and algorithms for learning and
 practice. The existing data structures are written in C#; the algorithm library
-provides equivalent, tested implementations in Python and C++.
+provides equivalent implementations in Python, C++, and C#.
 
 > This repository is intended for educational use. The implementations favor
 > readability and explicit control flow over standard-library shortcuts.
 
 ## Algorithms
 
-| Category | Algorithm | Python | C++ | Time complexity |
-| --- | --- | --- | --- | --- |
-| Sorting | Insertion sort | [source](algorithms/python/problem_solving_algorithms/sorting.py) | [source](algorithms/cpp/include/problem_solving_algorithms/sorting.hpp) | O(n²) |
-| Sorting | Merge sort | [source](algorithms/python/problem_solving_algorithms/sorting.py) | [source](algorithms/cpp/include/problem_solving_algorithms/sorting.hpp) | O(n log n) |
-| Sorting | Quicksort | [source](algorithms/python/problem_solving_algorithms/sorting.py) | [source](algorithms/cpp/include/problem_solving_algorithms/sorting.hpp) | O(n log n) average, O(n²) worst |
-| Searching | Linear search | [source](algorithms/python/problem_solving_algorithms/searching.py) | [source](algorithms/cpp/include/problem_solving_algorithms/searching.hpp) | O(n) |
-| Searching | Binary search | [source](algorithms/python/problem_solving_algorithms/searching.py) | [source](algorithms/cpp/include/problem_solving_algorithms/searching.hpp) | O(log n) |
-| Graphs | Breadth-first search | [source](algorithms/python/problem_solving_algorithms/graphs.py) | [source](algorithms/cpp/include/problem_solving_algorithms/graphs.hpp) | O(V + E) |
-| Graphs | Depth-first search | [source](algorithms/python/problem_solving_algorithms/graphs.py) | [source](algorithms/cpp/include/problem_solving_algorithms/graphs.hpp) | O(V + E) |
-| Graphs | Dijkstra's shortest path | [source](algorithms/python/problem_solving_algorithms/graphs.py) | [source](algorithms/cpp/include/problem_solving_algorithms/graphs.hpp) | O((V + E) log V) |
+| Category | Algorithm | Python | C++ | C# | Time complexity |
+| --- | --- | --- | --- | --- | --- |
+| Sorting | Insertion sort | [source](algorithms/python/problem_solving_algorithms/sorting.py) | [source](algorithms/cpp/include/problem_solving_algorithms/sorting.hpp) | [source](algorithms/csharp/src/ProblemSolving.Algorithms/SortingAlgorithms.cs) | O(n²) |
+| Sorting | Merge sort | [source](algorithms/python/problem_solving_algorithms/sorting.py) | [source](algorithms/cpp/include/problem_solving_algorithms/sorting.hpp) | [source](algorithms/csharp/src/ProblemSolving.Algorithms/SortingAlgorithms.cs) | O(n log n) |
+| Sorting | Quicksort | [source](algorithms/python/problem_solving_algorithms/sorting.py) | [source](algorithms/cpp/include/problem_solving_algorithms/sorting.hpp) | [source](algorithms/csharp/src/ProblemSolving.Algorithms/SortingAlgorithms.cs) | O(n log n) average, O(n²) worst |
+| Searching | Linear search | [source](algorithms/python/problem_solving_algorithms/searching.py) | [source](algorithms/cpp/include/problem_solving_algorithms/searching.hpp) | [source](algorithms/csharp/src/ProblemSolving.Algorithms/SearchingAlgorithms.cs) | O(n) |
+| Searching | Binary search | [source](algorithms/python/problem_solving_algorithms/searching.py) | [source](algorithms/cpp/include/problem_solving_algorithms/searching.hpp) | [source](algorithms/csharp/src/ProblemSolving.Algorithms/SearchingAlgorithms.cs) | O(log n) |
+| Graphs | Breadth-first search | [source](algorithms/python/problem_solving_algorithms/graphs.py) | [source](algorithms/cpp/include/problem_solving_algorithms/graphs.hpp) | [source](algorithms/csharp/src/ProblemSolving.Algorithms/GraphAlgorithms.cs) | O(V + E) |
+| Graphs | Depth-first search | [source](algorithms/python/problem_solving_algorithms/graphs.py) | [source](algorithms/cpp/include/problem_solving_algorithms/graphs.hpp) | [source](algorithms/csharp/src/ProblemSolving.Algorithms/GraphAlgorithms.cs) | O(V + E) |
+| Graphs | Dijkstra's shortest path | [source](algorithms/python/problem_solving_algorithms/graphs.py) | [source](algorithms/cpp/include/problem_solving_algorithms/graphs.hpp) | [source](algorithms/csharp/src/ProblemSolving.Algorithms/GraphAlgorithms.cs) | O((V + E) log V) |
 
 The sorting functions return a sorted copy and leave their input unchanged.
 Binary search expects an already sorted sequence. Dijkstra's algorithm accepts
@@ -44,6 +44,8 @@ algorithms/
 ├── cpp/
 │   ├── include/problem_solving_algorithms/  # Header-only implementations
 │   └── tests/                               # C++ test executable
+├── csharp/
+│   └── src/ProblemSolving.Algorithms/        # .NET 8 class library
 └── python/
     ├── problem_solving_algorithms/          # Importable Python package
     └── tests/                               # unittest suite
@@ -91,6 +93,8 @@ Run the existing C# test project with:
 dotnet test tests/tests.csproj
 ```
 
+The C# algorithm tests live beside the existing stack tests in [`tests/Unit/`](tests/Unit/).
+
 ## Quick examples
 
 Python:
@@ -109,6 +113,15 @@ C++:
 #include "problem_solving_algorithms/sorting.hpp"
 
 auto numbers = problem_solving::merge_sort(std::vector<int>{8, 2, 5, 1});
+```
+
+C#:
+
+```csharp
+using ProblemSolving.Algorithms;
+
+List<int> numbers = SortingAlgorithms.MergeSort(new[] { 8, 2, 5, 1 });
+int position = SearchingAlgorithms.BinarySearch(numbers, 5);
 ```
 
 ## License
